@@ -1,6 +1,4 @@
 Sistema de cadastro de pessoas e seus respectivos endereços
-
-Sistema de cadastro de pessoas e seus respectivos endereços
 ---
 #Tecnologias
  * Banco de dados Mysql.
@@ -12,7 +10,7 @@ Sistema de cadastro de pessoas e seus respectivos endereços
 
 1 º Baixar o zip do projeto e depois descompactar, ou clonar o projeto a partir da url
 
-2º Configurar o arquivo .env de acordo com os dados do seu banco de dados e do seu servidor.
+2º Configurar o arquivo .env de acordo com os dados do seu banco de dados.
 
 3 º Executar o comando:
 ~~~composer
