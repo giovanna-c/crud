@@ -47,7 +47,7 @@ $urlApagar =  Request::is('pessoa/consultar') ? 'apagar/': 'pessoa/apagar/';
                         <td>{{$pessoa->email}}</td>
                         <td>
                             <a href="{{$urlEditar . $pessoa->id_pessoa}}" class="btn btn-primary">Editar</a>
-                            <a class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</a>
+                            <a class="btn btn-danger bt_excluir" data-url="{{$urlApagar . $pessoa->id_pessoa}}">Excluir</a>
                         </td>
                     </tr>
                 @endforeach
@@ -56,25 +56,7 @@ $urlApagar =  Request::is('pessoa/consultar') ? 'apagar/': 'pessoa/apagar/';
     </div>
 </div>
 
-@if (!empty($pessoa))
-<div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="titulo" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="titulo">Excluir Pessoa</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir a pessoa e os endereços relacionados a ela?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <a href="{{$urlApagar . $pessoa->id_pessoa}}" class="btn btn-danger">Excluir</a>
-            </div>
-        </div>
-    </div>
-</div>
-@endif
+<div id="modalExcluir"></div>
+
+<script src="{{ asset('js/pessoa.js') }}" defer></script>
 @include('include.footer')
