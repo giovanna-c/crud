@@ -33,3 +33,5 @@ Sistema de cadastro de pessoas e seus respectivos endereços
 ~~~
 
 Acessar o link do servidor local (http://localhost:8000) 
+
+Na pasta database se encontra o dump do banco de dados com alguns registros.
