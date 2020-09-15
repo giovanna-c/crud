@@ -9,6 +9,7 @@ Sistema de cadastro de pessoas e seus respectivos endereços
  * Bootstrap 4.1.
  
 #Passos
+
 1 º Baixar o zip do projeto e depois descompactar, ou clonar o projeto a partir da url
 
 2º Configurar o arquivo .env de acordo com os dados do seu banco de dados e do seu servidor.
