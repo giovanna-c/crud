@@ -16,6 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `pessoas`
+--
+
+DROP TABLE IF EXISTS `pessoas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pessoas` (
+  `id_pessoa` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id_pessoa`),
+  UNIQUE KEY `pessoas_email_unique` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pessoas`
+--
+
+LOCK TABLES `pessoas` WRITE;
+/*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
+INSERT INTO `pessoas` VALUES (1,'Teste','teste@teste.com',NULL,NULL,'2020-09-15 04:23:21','2020-09-15 04:23:21'),(2,'Giovanna','giovanna-carla10@hotmail.com',NULL,NULL,'2020-09-15 04:29:32','2020-09-15 04:29:32');
+/*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `endereco`
 --
 
@@ -73,36 +103,6 @@ LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_pessoas_table',1),(2,'2014_10_12_100000_create_endereco_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pessoas`
---
-
-DROP TABLE IF EXISTS `pessoas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pessoas` (
-  `id_pessoa` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id_pessoa`),
-  UNIQUE KEY `pessoas_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pessoas`
---
-
-LOCK TABLES `pessoas` WRITE;
-/*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
-INSERT INTO `pessoas` VALUES (1,'Teste','teste@teste.com',NULL,NULL,'2020-09-15 04:23:21','2020-09-15 04:23:21'),(2,'Giovanna','giovanna-carla10@hotmail.com',NULL,NULL,'2020-09-15 04:29:32','2020-09-15 04:29:32');
-/*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
